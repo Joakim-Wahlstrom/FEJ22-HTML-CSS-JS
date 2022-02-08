@@ -1,0 +1,8 @@
+node_modules
+# ignorerar hela mappen
+
+passwords.txt
+# ignorerar en specifik fil
+
+# *.txt
+# ignorera alla .txt filer
