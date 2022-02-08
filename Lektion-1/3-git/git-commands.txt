@@ -1,0 +1,22 @@
+# git init
+    skapa en ny git i en specifik mapp. (görs bara en gång)
+    (det skapas en dold mapp som heter .git, den behöver vi inte gå in i)
+
+# git remote add origin https://github.com/dinrepoadress.git
+    kopplar ihop din git med din github (görs bara en gång)
+
+---------------------------------------------------------------------------------
+
+# git add .
+    för att lägga till nya filer till index (stage area)
+
+# git commit -m "Ett vettigt meddelande"
+    För att spara nya filer och ändrade filer
+
+# git push -u origin master (git push)
+    för att synka den lokala giten med din github repo
+    (efter det är synkat första gången så kan man skriva bara git push)
+
+
+---------------------------------------------------------------------------------
+
