@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+
+  <!-- <form action="info.html" method="get"> -->
+  <form>
+
+<!-- 
+  GET - skicka all data i URL, fungerar bra när vi tex söker efter någonting
+        eller hämtar information
+        MEN absolut INTE känslig data så som lösenord osv.
+
+  POST -  lägger in datan i ett krypterat paket (body) så det syns inte i URL,
+          mycket säkrare metod, används när vi skapar eller registerar någonting
+
+  PUT - används när vi vill uppdatera ett HELT objekt, Informationen skickas i en body och objektets
+        id skickas i URL
+
+  PATCH - används när vi vill uppdatera hela eller delar av ett objekt,
+          informationen skickas i en body och objektets id i URL
+
+  DELETE - tar bort ett objekt genom att skicka objektets id i URL
+
+  Dom här valen brukar vi oftast hantera med hjälp av JavaScript, då får vi bättre kontroll
+
+  -->
+
+  <!-- <label>
+    <p>first name:</p>
+    <input type="text">
+  </label> -->
+
+  <div>
+    <label for="firstNameInput">First Name:</label>
+    <input type="text" id="firstNameInput" name="firstName">
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName">
+  </div>
+
+  <div>
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput" name="email">
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+  </div>
+
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" min="1" max="99">
+  </div>
+  
+
+  <button>submit</button>
+  <!-- <input type="submit" value="submit2"> -->
+
+  </form>
+  
+</body>
+</html>
