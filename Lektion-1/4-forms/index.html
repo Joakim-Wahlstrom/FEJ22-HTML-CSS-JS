@@ -8,8 +8,8 @@
 </head>
 <body>
 
-  <!-- <form action="info.html" method="get"> -->
-  <form>
+  <form action="info.html" method="get">
+  <!-- <form> -->
 
 <!-- 
   GET - skicka all data i URL, fungerar bra när vi tex söker efter någonting
@@ -38,11 +38,11 @@
 
   <div>
     <label for="firstNameInput">First Name:</label>
-    <input type="text" id="firstNameInput" name="firstName">
+    <input type="text" id="firstNameInput" name="firstName" value="Joakim" required>
   </div>
   <div>
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName">
+    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
   </div>
 
   <div>
@@ -52,17 +52,81 @@
 
   <div>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+    <input type="password" id="password" name="password" required>
   </div>
 
   <div>
     <label for="age">Age:</label>
-    <input type="number" name="age" id="age" min="1" max="99">
+    <input type="number" name="age" id="age" min="1" max="99" disabled>
+  </div>
+
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
   </div>
   
 
+  <div>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+  </div>
+  <div>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+  </div>
+  <div>
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+  </div>
+
+  <div>
+    <label for="role">Role:</label>
+    <select name="role" id="role">
+      <option value="" selected disabled></option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+      <option value="option-3">Guest</option>
+    </select>
+  </div>
+
+
+  <div>
+    <div class="terms">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I have read and agree to the terms</label>
+    </div>
+    <div class="news">
+      <input type="checkbox" id="news" name="news" checked>
+      <label for="news">I would like to subscribe to the newsletter</label>
+    </div>
+  </div>
+
+  <div>
+    <p>skills</p>
+    <div>
+      <input type="checkbox" id="html" name="skills" value="html">
+      <label for="html">html</label>
+    </div>
+    <div>
+      <input type="checkbox" id="css" name="skills" value="css">
+      <label for="css">css</label>
+    </div>
+    <div>
+      <input type="checkbox" id="javascript" name="skills" value="javascript">
+      <label for="javascript">javascript</label>
+    </div>
+  </div>
+
+  <div>
+    <label for="message">Message:</label> <br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+  </div>
+
+  <br>
+  <br>
+
   <button>submit</button>
-  <!-- <input type="submit" value="submit2"> -->
+  <input type="submit" value="submit2" disabled>
 
   </form>
   
