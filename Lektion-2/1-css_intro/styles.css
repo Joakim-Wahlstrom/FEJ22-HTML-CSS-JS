@@ -1,0 +1,22 @@
+h2 {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: #0000ff;
+}
+small {
+  color: rgb(0, 0, 255);
+}
+#postOne {
+  background-color: rgb(181, 130, 202);
+}
+.post {
+  background-color: #bdbdbd;
+}
+div {
+  background-color: rgb(93, 78, 133);
+}
+div p,
+.sm {
+  color: aquamarine;
+}
