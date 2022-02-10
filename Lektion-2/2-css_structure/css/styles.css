@@ -15,6 +15,13 @@ body {
   margin: auto;
 }
 
+.headline {
+  font-size: 2rem;
+}
+.m-b-2 {
+  margin-block: 2rem;
+}
+
 .card-1 {
   background-color: #222;
   color: #fff;
@@ -45,24 +52,80 @@ body {
   padding: 1rem;
 }
 
-.btn {
-  /* margin-top: 1rem; */
-  /* margin-block: 1rem; */
-  /* margin: 1rem 0; */
-  margin: 1rem 0 2rem 0;
-  background-color: #333;
-  border: 0;
-  border-radius: .5em;
-  color: #fff;
-  padding: 0.5em 1em;
-  font-size: 1rem;
-}
-
 .card-2 {
   border: 1px solid #222;
   margin-bottom: 2rem;
+  /* padding-block: 2rem;
+  padding-inline: 2rem; */
+  /* padding-top: 1rem;
+  padding-right: 3rem;
+  padding-bottom: 4rem;
+  padding-left: 0;
+  padding: 1rem 3rem 4rem 0; */
+  /* padding: 2rem 5rem; */
+  padding: 2rem;
 }
 .card-3 {
   border: 3px dashed #222;
   margin-top: 2rem;
+}
+.card-3 ul {
+  list-style: none;
+}
+.card-3 a {
+  text-decoration: none;
+  color: #222;
+}
+.card-3 a:hover {
+  color: green;
+}
+.card-3 li:nth-child(even) {
+  background-color: #bbb;
+}
+
+.links {
+  margin-top: 2rem;
+}
+.link {
+  border: 1px solid #444;
+  width: 300px;
+  height: 50px;
+  margin-top: 1rem;
+  /* padding: 1rem; */
+  display: inline-block;
+}
+
+.btn {
+  margin: 1rem 0 2rem 0;
+  border: 0;
+  border-radius: .5em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+  /* transition: background-color 150ms ease, color 150ms ease; */
+  transition: all 150ms ease;
+}
+.btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: rgb(122, 138, 125);
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b4b4b4;
+  color: #222;
+}
+.btn-primary:active {
+  background-color: limegreen;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: rgb(75, 94, 79);
+  color: rgb(185, 185, 185);
+}
+.btn-secondary:active {
+  background-color: limegreen;
 }
