@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.item {
+  background-color: teal;
+  border: 1px dotted #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1rem;
+}
+
+.grid-fit {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1rem;
+}
