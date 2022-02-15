@@ -1,0 +1,45 @@
+@import "../default.css";
+
+#primary-section,
+#secondary-section {
+  flex: 1;
+}
+
+#primary-section { order: 2; }
+
+#secondary-section {
+  flex-direction: column-reverse;
+  order: 1;
+}
+
+.box {
+  flex: 1;
+  padding: 2rem;
+}
+
+#primary-section .box { background-color: #8ab3c2; color: #fff; }
+#secondary-section .box:nth-child(1) { background-color: #b5d5e2; }
+#secondary-section .box:nth-child(2) { background-color: #9ec8d8; }
+
+.content {
+  margin-top: 3rem;
+}
+
+.primary-nav {
+  background-color: #8ab3c2;
+  padding: 1rem 0;
+}
+
+.primary-nav .d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+}
+.nav-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 2rem;
+}
