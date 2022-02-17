@@ -1,0 +1,13 @@
+:root {
+  --bs-primary-rgb: 47, 79, 79;
+}
+.btn-primary {
+  background-color: rgb(47, 79, 79);
+  color: #fff;
+  border-color: rgb(47, 79, 79);
+}
+.btn-min {
+  background-color: rgb(47, 79, 79);
+  color: #fff;
+  border-color: rgb(47, 79, 79);
+}
