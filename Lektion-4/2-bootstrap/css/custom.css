@@ -11,3 +11,6 @@
   color: #fff;
   border-color: rgb(47, 79, 79);
 }
+.carousel-item {
+  height: 400px;
+}
