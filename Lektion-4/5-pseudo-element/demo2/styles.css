@@ -1,0 +1,44 @@
+.quote {
+  font-weight: 700;
+  text-align: center;
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 3rem;
+  color: #b6b6b6;
+}
+.quote::after {
+  content: close-quote;
+  font-size: 3rem;
+  color: #b6b6b6;
+}
+
+*[data-tool-tip] {
+  /* font-size: 2rem;
+  color: red; */
+  position: relative;
+}
+
+*[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: #4d4d4dc9;
+  color: #fff;
+  padding: .7em 2em;
+  border-radius: .4em;
+  font-size: .8rem;
+
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  /* transform: translate(0, -1.5em); */
+  margin-bottom: 1.5em;
+  transform: scale(0);
+  transition: transform 150ms ease-out;
+}
+
+*[data-tool-tip]:hover::after {
+  transform: scale(1);
+}
