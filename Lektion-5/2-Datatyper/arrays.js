@@ -12,7 +12,7 @@
 const users = [
   { firstName: 'Joakim', lastName: 'Wahlström', age: 35, isActive: true },
   { firstName: 'Jeanette', lastName: 'Wahlström', age: 33, isActive: false },
-  { firstName: 'Hans', lastName: 'Mattin-Lassei', age: 38, isActive: false },
+  { firstName: 'Hans', lastName: 'Mattin-Lassei', age: 38, isActive: true },
 ]
 
 const names = ['Joakim', 'Jeanette', 'Hans'];
@@ -124,7 +124,7 @@ const obj3 = {
 // console.log(obj3)
 
 const newNames = ['Ca', 'Bb', '1a', '2a', 'aa', 'bb']
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 // newNames.sort()
 // console.log(newNames)
@@ -134,7 +134,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 // })
 // console.log(numbers)
 
-console.log(names)
+// console.log(names)
 
 // names.sort()
 // console.log(names)
@@ -143,4 +143,59 @@ console.log(names)
 
 names.sort().reverse()
 
-console.log(names)
+// console.log(names)
+
+
+
+
+
+// High order Array Methods
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// .reduce
+const sum = numbers.reduce(function(acc, current) {
+  // console.log('acc: ' + acc, 'current: ' + current)
+  return acc + current
+})
+
+// console.log(sum)
+
+
+
+// .filter
+const filteredArray = numbers.filter((num) => {
+  // console.log(num)
+  // if(num < 6) {
+  //   return num
+  // }
+  return num < 6
+})
+
+// const activeUsers = users.filter(user => {
+//   if(user.isActive){
+//     return user
+//   }
+// })
+
+// console.log(filteredArray)
+// console.log(activeUsers)
+
+
+
+// .map
+const mappedArray = numbers.map((num, index) => {
+  return `index: ${index} - number: ${num}`
+})
+
+// console.log(mappedArray)
+
+
+
+// .forEach
+
+numbers.forEach(num => {
+  console.log(num)
+})
+
+console.log(numbers)
