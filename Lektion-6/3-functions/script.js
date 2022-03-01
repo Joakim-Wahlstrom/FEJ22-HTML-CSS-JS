@@ -119,6 +119,57 @@ const greet = name => {
 
 greet('Joakim')
 
+
 const calc = (num1 = 0, num2 = 0) => +num1 + +num2
 
 // console.log(calc(10,5))
+
+// CALLBACK FUNCTION
+
+let names = ['Joakim', 'Hans', 'Tommy']
+
+// names.forEach(name => {
+//   console.log(name)
+// })
+
+// cb = callback
+const minFunktion = (nr1, nr2, cb) => {
+  setTimeout(() => {
+    let sum = +nr1 + nr2
+
+    cb(sum)
+  }, 2000)
+}
+
+
+// minFunktion(5, 10, (data) => {
+//   console.log(data)
+// })
+
+
+// METHODS
+// en method är en funktion som är inbyggd i ett objekt
+
+let myName = names[0];
+// console.log(myName)
+
+// det här är en metod
+let upper = myName.toUpperCase()
+// console.log(upper)
+
+
+let user = {
+  firstName: 'Joakim',
+  lastName: 'Wahlström',
+  fullName() {
+    return this.firstName + ' ' + this.lastName
+    // console.log(this)
+  }
+  // fullName: () => {
+  //   console.log(this)
+  // }
+}
+
+
+console.log(user.fullName())
+
