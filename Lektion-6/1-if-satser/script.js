@@ -73,7 +73,7 @@ let isLoggedIn = true;
 
 
 if(isLoggedIn) {
-  console.log('användaren är inloggad')
+  // console.log('användaren är inloggad')
   // visa mina sidor i navbaren
 }
 if(!isLoggedIn) {
@@ -84,12 +84,12 @@ if(!isLoggedIn) {
 let array = ['Joakim']
 
 if(array.length) {
-  console.log('arrayen innehåller någonting')
+  // console.log('arrayen innehåller någonting')
   // skriv ut all data på sidan
 }
 
 if(!array.length) {
-  console.log('arrayen innehåller INTE någonting')
+  // console.log('arrayen innehåller INTE någonting')
   // skriv ut att "här var det tomt"
 }
 
@@ -97,7 +97,7 @@ let user = null
 // user = {}
 
 if(user) {
-  console.log('det finns en användare')
+  // console.log('det finns en användare')
 }
 
 
@@ -117,17 +117,75 @@ let st = '15';
 let nr = 13;
 
 if(st > 15 && nr == 13) {
-  console.log('här måste alla påståenden vara sant')
+  // console.log('här måste alla påståenden vara sant')
 }
 
 if(st > 15 || nr === 13) {
-  console.log('här räcker det att ett av påståenena är sant')
+  // console.log('här räcker det att ett av påståenena är sant')
 }
 
 if(st > nr || typeof st == typeof nr && nr > st) {
-  console.log('är string större än nr, eller är string och numer samma datatyp och nr är större än st')
+  // console.log('är string större än nr, eller är string och numer samma datatyp och nr är större än st')
 }
 
 
 // if,  else if,  else
 
+let name = 'Hans';
+
+// if(name === 'Joakim') {
+//   console.log('namnet är: ' + name)
+// }
+// if(name === 'Hans') {
+//   console.log('namnet är: ' + name)
+// }
+// if(name === 'Joakim') {
+//   console.log('namnet är: ' + name)
+// }
+// if(name === 'Jeanette') {
+//   console.log('namnet är: ' + name)
+// }
+
+if(name === 'Joakim') {
+  console.log('namnet är: Joakim')
+} 
+else if(name === 'Joakim') {
+  console.log('namnet är: Joakim')
+}
+else if(name === 'Hans') {
+  console.log('namnet är Hans')
+}
+else if(name === 'Hans') {
+  console.log('namnet är Hans')
+}
+else if(name === 'Hans') {
+  console.log('namnet är Hans')
+}
+else if(name === 'Jeanette') {
+  console.log('namnet är: Jeanette')
+}
+else {
+  console.log('namnet är okänt')
+}
+
+
+
+
+// Ternary operator
+
+let age = 18;
+// let drink;
+
+// if( age >= 18) {
+//   drink = 'Beer'
+// } else {
+//   drink = 'Coke'
+// }
+
+let drink = age >= 18 ? 'Beer' : 'Coke'
+
+1 ? console.log('det är true') : console.log('det är false')
+
+console.log(drink)
+
+{/* <div class={loggedIn ? 'd-block' : 'd-none'}> */}
