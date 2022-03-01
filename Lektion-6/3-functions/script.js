@@ -119,7 +119,6 @@ const greet = name => {
 
 greet('Joakim')
 
-
 const calc = (num1 = 0, num2 = 0) => +num1 + +num2
 
 // console.log(calc(10,5))
