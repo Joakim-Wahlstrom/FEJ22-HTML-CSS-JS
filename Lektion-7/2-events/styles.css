@@ -1,0 +1,11 @@
+#square {
+  border: 1px solid #333;
+  width: 255px;
+  aspect-ratio: 1;
+  /* background-color: rgb(0, 0, 255); */
+}
+
+
+.focus-red {
+  outline: 3px solid red;
+}
