@@ -102,18 +102,37 @@ const setSuccess = input => {
   parent.classList.add('is-valid');
 }
 
+const validate = input => {
+  switch(input.type) {
+    case 'text': return validateText(input)
+    case 'email': return validateEmail(input)
+    case 'password': return input.id !== 'password2' ? validatePassword(input) : samePassword(password, password2)
+    case 'checkbox': return validateCheck(input)
+    default: break;
+  }
+}
+
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  if(validateText(firstName) &&
-  validateText(lastName) &&
-  validateEmail(email) &&
-  validatePassword(password) &&
-  samePassword(password, password2) &&
-  validateCheck(tac)) {
-    alert('yaay')
+  const errors = []
+
+  for(let i = 0; i < form.length; i++) {
+    errors[i] = validate(form[i])
   }
 
+  if(errors.includes(false)) 
+    return;
 
+
+  const user = {
+    id: Date.now().toString(),
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    password: password.value
+  }
+
+  console.log(user)
 
 })
