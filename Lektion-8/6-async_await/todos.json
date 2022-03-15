@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "Städa kontoret",
+    "completed": false
+  },
+  {
+    "id": "2",
+    "title": "Tvätta bilen",
+    "completed": false
+  },
+  {
+    "id": "3",
+    "title": "Gå ut med soporna",
+    "completed": false
+  }
+]
