@@ -1,0 +1,99 @@
+:root {
+  --clr-bg-main: #e7ecff;
+  --clr-error: #df1616;
+  --clr-success: #28b106;
+  --clr-border: #c7c7c7;
+  --clr-primary: #dfa11c;
+
+  --border-radius: .8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--clr-bg-main);
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  padding: .6em 1.4em;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--border-radius);
+  background: transparent;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+
+/* regForm Start */
+.regForm {
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  min-width: 400px;
+  box-shadow: 3px 3px 5px #0000002c;
+}
+.headline {
+  text-align: center;
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 1rem;
+}
+
+.form-content {
+  margin-top: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-label,
+.form-control {
+  display: block;
+  width: 100%;
+  margin-bottom: .3rem;
+}
+.form-control {
+  padding: .6em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--clr-border);
+}
+.form-control:focus {
+  outline: 1px solid #707070;
+}
+.invalid-input {
+  font-size: .9rem;
+  color: var(--clr-error);
+  display: none;
+}
+.form-check {
+  margin-bottom: .3rem;
+}
+
+.is-invalid .invalid-input {
+  display: block;
+}
+.is-invalid .form-control {
+  border: 1px solid var(--clr-error);
+}
+
+.is-valid .form-control {
+  border: 1px solid var(--clr-success);
+}

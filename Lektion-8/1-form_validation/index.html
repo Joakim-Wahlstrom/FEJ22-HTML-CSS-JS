@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Form Validation</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <form id="regForm" class="regForm">
+
+      <div class="headline">
+        <h1>Register user</h1>
+      </div>
+
+      <div class="form-content">
+
+        <div class="input-group is-invalid">
+          <label for="firstName" class="input-label">First Name: </label>
+          <input type="text" id="firstName" class="form-control">
+          <p class="invalid-input">Error msg</p>
+        </div>
+        <div class="input-group is-valid">
+          <label for="lastName" class="input-label">Last Name: </label>
+          <input type="text" id="lastName" class="form-control">
+          <p class="invalid-input">Error msg</p>
+        </div>
+        <div class="input-group">
+          <label for="email" class="input-label">Email: </label>
+          <input type="email" id="email" class="form-control">
+          <p class="invalid-input">Error msg</p>
+        </div>
+        <div class="input-group">
+          <label for="password" class="input-label">Password: </label>
+          <input type="password" id="password" class="form-control">
+          <p class="invalid-input">Error msg</p>
+        </div>
+        <div class="input-group">
+          <label for="password2" class="input-label">Repeat Password: </label>
+          <input type="password" id="password2" class="form-control">
+          <p class="invalid-input">Error msg</p>
+        </div>
+
+        <div class="input-group">
+          <input type="checkbox" id="tac" class="form-check">
+          <label for="tac">Accept terms and conditions</label>
+          <p class="invalid-input">Error msg</p>
+        </div>
+
+        <button class="btn btn-primary btn-block">Register</button>
+
+      </div>
+
+    </form>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
