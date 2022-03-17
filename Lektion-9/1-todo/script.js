@@ -1,6 +1,7 @@
 const output = document.querySelector('#output')
 const form = document.querySelector('#todoForm')
 const input = document.querySelector('#todoInput')
+const error = document.querySelector('#error')
 
 let todos = []
 
@@ -16,21 +17,88 @@ fetchTodos()
 
 const listTodos = () => {
   todos.forEach(todo => {
-    output.insertAdjacentHTML('beforeend', newTodo(todo))
+    // output.insertAdjacentHTML('beforeend', createTodoElement(todo))
+    createTodoElement(todo, output, 'beforeend', false)
   })
 }
 
 
-const newTodo = (todo) => {
-  let template = `
-  <div class="border-bottom py-2">
+const createTodoElement = (todo, parent, placement, isNew) => {
+  parent.insertAdjacentHTML(placement, `
+  <div id="todo_${todo.id}" class="border-bottom py-2 ${isNew ? 'slide-in' : ''}">
     <div class="d-flex justify-content-between align-items-center">
-      <p class="h4 m-0 todo-title ${todo.completed ? 'complete' : ''}">${todo.title}</p>
-      <button class="btn btn-danger btn-sm">X</button>
+      <p id="title_${todo.id}" class="h4 m-0 todo-title ${todo.completed ? 'complete' : ''}">${todo.title}</p>
+      <button id="delete_${todo.id}" class="btn btn-danger btn-sm">X</button>
     </div>
-  </div>
-  `
-  return template
+  </div>`)
+
+  addRemoveOnClick(todo)
+
+}
+
+const addRemoveOnClick = (todo) => {
+  document.querySelector(`#delete_${todo.id}`).addEventListener('click', () => {
+    if(todo.completed) {
+      error.classList.add('d-none')
+      deleteTodo(todo)
+    } else {
+      error.innerText = 'You need to complete the todo first'
+      error.classList.remove('d-none')
+    }
+
+  })
+}
+
+const deleteTodo = async (todo) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
+    method: 'DELETE'
+  })
+
+  if(!res.ok) {
+    error.innerText = 'Something went wrong'
+    error.classList.remove('d-none')
+    return
+  }
+  error.classList.add('d-none')
+
+  const todoElement = document.querySelector(`#todo_${todo.id}`)
+
+  todoElement.addEventListener('animationend', () => {
+    todoElement.remove()
+    console.log(todos)
+  })
+
+  todoElement.classList.add('slide-out')
+}
+
+
+const createTodo = async (title) => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8'
+    },
+    body: JSON.stringify({
+      title,
+      completed: false
+    })
+  })
+
+  if(!res.ok) {
+    error.innerText = 'Something went wrong'
+    error.classList.remove('d-none')
+    return
+  }
+  error.classList.add('d-none')
+
+
+  const todo = await res.json()
+  todo.id = Date.now()
+  
+  todos.push(todo)
+  // output.insertAdjacentHTML('beforeend', createTodoElement(todo))
+  createTodoElement(todo, output, 'beforeend', true)
+
 }
 
 
@@ -43,7 +111,10 @@ form.addEventListener('submit', e => {
     return;
   }
 
+  input.classList.remove('is-invalid')
+  createTodo(input.value)
+  input.value = '';
 
-
-  
 })
+
+

@@ -6,3 +6,32 @@
   color: #8a8a8a;
   text-decoration: line-through;
 }
+
+.slide-in {
+  animation: slide-in 350ms ease-out;
+}
+.slide-out {
+  animation: slide-out 350ms ease-out;
+}
+
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
