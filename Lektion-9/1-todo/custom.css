@@ -1,0 +1,8 @@
+.todo-title {
+  cursor: pointer;
+  flex: 1;
+}
+.complete {
+  color: #8a8a8a;
+  text-decoration: line-through;
+}
