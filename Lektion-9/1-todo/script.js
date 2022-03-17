@@ -65,6 +65,7 @@ const deleteTodo = async (todo) => {
 
   todoElement.addEventListener('animationend', () => {
     todoElement.remove()
+    todos = todos.filter(_todo => _todo.id !== todo.id)
     console.log(todos)
   })
 
